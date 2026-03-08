@@ -17,7 +17,7 @@ def run_nelder_mead(req):
         beta = req.beta,
         gamma = req.gamma,
         max_iter = req.max_iter,
-        goal_delta = req.goal_delta
+        delta = req.delta
     )
 
     frames = []

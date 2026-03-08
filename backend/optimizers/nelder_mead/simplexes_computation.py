@@ -24,7 +24,7 @@ def random_simplex(search_space):
 
 
 def get_nelder_mead_simplexes(function, search_space, alpha=1, beta=2, gamma=0.5,
-                max_iter=10, goal_delta=1e-6):
+                max_iter=10, delta=1e-6):
 
     initial_simplex = random_simplex(search_space)
 
@@ -46,7 +46,7 @@ def get_nelder_mead_simplexes(function, search_space, alpha=1, beta=2, gamma=0.5
         # we stop when best - worst < delta
         
         current_delta = max(values) - min(values)
-        if current_delta <= goal_delta:
+        if current_delta <= delta:
             break
 
     
