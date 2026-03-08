@@ -93,3 +93,11 @@ details[open] > summary {
 .error-notice {
     background-color: rgb(244, 199, 199);
 }
+
+#scaling-parameter-box {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}

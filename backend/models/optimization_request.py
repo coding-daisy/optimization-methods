@@ -18,7 +18,8 @@ class OptimizationRequest(BaseModel):
     gamma: float = 0.5
     delta: float = 1e-6
     
-    plot_scaling: Literal["log", "none"] = "none"
+    plot_scaling: Literal["logarithmic", "linear"] = "linear"
         # Literal is something like Enum -> fixed values
+
 
 

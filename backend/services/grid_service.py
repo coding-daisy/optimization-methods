@@ -3,10 +3,10 @@ from objective_functions import FUNCTIONS
 
 def function_scaled(X, Y, function, plot_scaling):
     Z = function((X, Y))
-    if not plot_scaling:
+    if (plot_scaling == "linear"):
         return Z
-    if (plot_scaling == "log"):
-        return np.log(Z - Z.min() + 1)
+    if (plot_scaling == "logarithmic"):
+        return np.sign(Z) * np.log1p(np.abs(Z))
     return Z
 
 def compute_grid(req, function):

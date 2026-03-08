@@ -5,13 +5,17 @@ export async function initialPlot(data) {
     const plotRange = data.plot_range;
     const searchRectangle = data.search_rectangle;
 
+    const ncontours = parseInt(document.querySelector('input[name="levels"]').value);
+
+    console.log(ncontours);
+
     const contour = {
         type: "contour",
         x: grid.x,
         y: grid.y,
         z: grid.z,
         colorscale: "Blues",
-        ncontours: 20
+        ncontours: ncontours
     };
 
     const simplex = {

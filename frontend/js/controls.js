@@ -26,8 +26,10 @@ export function getParameters() {
 
     return {
 
-        plot_scaling: "log",
-        // THESE SHOULD ALSO BECOME CHOOSABLE !
+        plot_scaling: document.querySelector('input[name="plot_scaling"]:checked').value,
+
+        // the level count is NOT sent to backend: used directly for frontend plotting!
+        // levels: parseInt(document.querySelector('input[name="levels"]').value),
 
         min_x: parseFloat(document.getElementById("min_x").value),
         max_x: parseFloat(document.getElementById("max_x").value),
