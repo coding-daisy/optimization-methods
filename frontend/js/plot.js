@@ -7,8 +7,6 @@ export async function initialPlot(data) {
 
     const ncontours = parseInt(document.querySelector('input[name="levels"]').value);
 
-    console.log(ncontours);
-
     const contour = {
         type: "contour",
         x: grid.x,

@@ -192,15 +192,15 @@
 
                     <div class = "function-selection">
                         <label>
-                            <input type="radio" name="function" value="rosenbrock" checked>
-                            Rosenbrock
+                            <input type="radio" name="function" value="himmelblau" checked>
+                            Himmelblau
                         </label>
                     </div>
 
                     <div class = "function-selection">
                         <label>
-                            <input type="radio" name="function" value="himmelblau">
-                            Himmelblau
+                            <input type="radio" name="function" value="rosenbrock">
+                            Rosenbrock
                         </label>
                     </div>
 
@@ -246,25 +246,34 @@
                             <div>levels</div>
                             <div class="val-display">value</div>
                         </div>
-                        <input type="range" name="levels" min="1" max="100" step="1" value="10">
+                        <input type="range" name="levels" min="1" max="100" step="1" value="15">
                         
                     </div>
 
-                <div>
-                    <div class = "scaling-selection">
-                        <label>
-                            <input type="radio" name="plot_scaling" value="linear">
-                            linear scale
-                        </label>
+                    <div class = "parameter-adjustment">
+                        <div class = "parameter-label">
+                            <div>frames/second</div>
+                            <div class="val-display">value</div>
+                        </div>
+                        <input type="range" name="speed" min="0.2" max="20" step="0.2" value="2">
+                        
                     </div>
-                    <div class = "scaling-selection">
-                        <label>
-                            <input type="radio" name="plot_scaling" value="logarithmic" checked>
-                            logarithmic scale
-                        </label>
-                    </div>
-                </div>
 
+                    <div>
+                        <div class = "scaling-selection">
+                            <label>
+                                <input type="radio" name="plot_scaling" value="linear">
+                                linear scale
+                            </label>
+                        </div>
+                        <div class = "scaling-selection">
+                            <label>
+                                <input type="radio" name="plot_scaling" value="logarithmic" checked>
+                                logarithmic scale
+                            </label>
+                        </div>
+                    </div>
+            </div>
 
 
         </details>

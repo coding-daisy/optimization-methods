@@ -32,6 +32,9 @@ async function run() {
 
     const frames = data.frames;
 
+    const frames_per_second = parseFloat(document.querySelector('input[name="speed"]').value);
+    const ms_between_frames = 1 / frames_per_second * 1000;
+
     for (let frame of frames) {
 
         if (runId !== currentRun) {
@@ -47,7 +50,7 @@ async function run() {
 
         // this means: update trace index 1 !
 
-        await new Promise(r => setTimeout(r, 500));
+        await new Promise(r => setTimeout(r, ms_between_frames));
         
     }
 }
