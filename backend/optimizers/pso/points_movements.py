@@ -5,7 +5,7 @@ from optimizers.evaluation_with_penalty import evaluate_with_penalty
 import numpy as np
     # for working with positions as lists !
 
-def get_points_and_movement(function, current_swarm, w, c_ind, c_grp, penalty =  "squared distance", penalty_strength = 10, search_space = [], max_speed = 2):
+def get_points_and_movement(function, current_swarm, w, c_ind, c_grp, penalty, penalty_strength, search_space, max_speed):
     
     # per swarm: store best fitness & point
 

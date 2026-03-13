@@ -23,8 +23,8 @@ def random_simplex(search_space):
 
 
 
-def get_nelder_mead_simplexes(function, search_space, alpha=1, beta=2, gamma=0.5,
-                max_iter=10, delta=1e-6):
+def get_nelder_mead_simplexes(function, search_space, alpha, beta, gamma,
+                max_iter, delta, penalty_function, penalty_strength):
 
     initial_simplex = random_simplex(search_space)
 
@@ -35,7 +35,7 @@ def get_nelder_mead_simplexes(function, search_space, alpha=1, beta=2, gamma=0.5
 
     for i in range(max_iter):
 
-        current_simplex = simplex_computation(function, current_simplex, alpha, beta, gamma, search_space = search_space)
+        current_simplex = simplex_computation(function, current_simplex, alpha, beta, gamma, penalty_function, penalty_strength, search_space)
 
         simplexes.append(current_simplex)
 

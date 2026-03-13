@@ -45,7 +45,7 @@ def run_sa(req):
     # no special stopping conditions yet !
 
     initial_sit = get_init_situation(
-        function, search_space, req.init_temperature, penalty =  "squared distance", penalty_strength = 10
+        function, search_space, req.init_temperature, req.penalty_function, req.penalty_strength
     )
 
     all_sit = []
@@ -54,7 +54,7 @@ def run_sa(req):
     current_sit = initial_sit
 
     while (current_sit.temperature - req.temperature_decrease >= 0):
-        next_sit = get_next_situation(function, current_sit, req.temperature_decrease, p_function, req.speed_range, search_space, penalty =  "squared distance", penalty_strength = 10)
+        next_sit = get_next_situation(function, current_sit, req.temperature_decrease, p_function, req.speed_range, search_space, req.penalty_function, req.penalty_strength)
         all_sit.append(next_sit)
         current_sit = next_sit
 

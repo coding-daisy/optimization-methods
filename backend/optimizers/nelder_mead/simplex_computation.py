@@ -1,7 +1,7 @@
 import numpy as np
 from optimizers.evaluation_with_penalty import evaluate_with_penalty
 
-def simplex_computation(function, current_simplex, alpha, beta, gamma, penalty =  "squared distance", penalty_strength = 10, search_space = []):
+def simplex_computation(function, current_simplex, alpha, beta, gamma, penalty, penalty_strength, search_space):
 
     # function_wp is function with penalty
 

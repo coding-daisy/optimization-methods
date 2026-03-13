@@ -2,7 +2,7 @@ import random
 from optimizers.pso.point_class import PSO_Point
 from optimizers.evaluation_with_penalty import evaluate_with_penalty
 
-def initialize_swarm(swarm_size, search_space, function, penalty="squared distance", penalty_strength=10, speed_range = [-1, 1]):
+def initialize_swarm(swarm_size, search_space, function, penalty, penalty_strength, speed_range):
 
 
     swarm = {

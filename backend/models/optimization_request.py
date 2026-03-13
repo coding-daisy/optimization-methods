@@ -15,6 +15,9 @@ class BaseOptimizationRequest(BaseModel):
     max_y: float = 5
     margin_ratio: float = 0.2
 
+    penalty_function: Literal["none", "linear", "squared distance"] = "linear"
+    penalty_strength: float = 1
+
     max_iter: int = 20
     
     plot_scaling: Literal["logarithmic", "linear"] = "linear"

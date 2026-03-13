@@ -39,7 +39,7 @@ def run_pso(req):
     # no special stopping conditions yet !
 
     initial_points = initialize_swarm(
-        req.swarm_size, search_space, function, speed_range = [req.init_max_speed, req.init_max_speed]
+        req.swarm_size, search_space, function, req.penalty_function, req.penalty_strength, [req.init_max_speed, req.init_max_speed]
     )
 
     current_swarm = initial_points
@@ -48,7 +48,7 @@ def run_pso(req):
     all_swarms.append(initial_points)
 
     for _ in range(req.max_iter):
-        current_swarm = get_points_and_movement(function, current_swarm, req.w, req.c_ind, req.c_grp, search_space = search_space, max_speed =req.max_speed)
+        current_swarm = get_points_and_movement(function, current_swarm, req.w, req.c_ind, req.c_grp, req.penalty_function, req.penalty_strength, search_space, req.max_speed)
         all_swarms.append(current_swarm)
 
 

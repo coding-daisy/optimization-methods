@@ -96,7 +96,6 @@
                 </div>
 
 
-
             </div>
 
         </details>
@@ -186,6 +185,11 @@
 
             <div class = "parameter-group">
 
+                
+                <i style = "margin-top: 15px">
+                    optimized function:
+                </i>
+
                 <div class = "parameter-row">
 
 
@@ -226,6 +230,58 @@
                     <input type="text" name="custom-function">
 
                 </div>
+
+                
+                <i style = "margin-top: 15px">
+                    penalty function:
+                </i>
+
+                
+                <div class = "parameter-row">
+
+
+
+                    <div class = "penalty-function-selection">
+                        <label>
+                            <input type="radio" name="penalty_function" value="none">
+                            none
+                        </label>
+                    </div>
+
+                    <div class = "penalty-function-selection">
+                        <label>
+                            <input type="radio" name="penalty_function" value="linear">
+                            linear
+                        </label>
+                    </div>
+
+                    <div class = "penalty-function-selection">
+                        <label>
+                            <input type="radio" name="penalty_function" value="squared_distance" checked>
+                            squared
+                        </label>
+                    </div>
+
+
+
+
+
+                    
+                    <div class = "parameter-adjustment">
+                        <div class = "parameter-label">
+                            <div>penalty strength</div>
+                            <div class="val-display">value</div>
+                        </div>
+                        <input type="range" id="penalty_strength" min="0" max="10" step="0.1" value="1">
+                        
+                    </div>
+
+
+
+
+                </div>
+
+                
 
             </div>
         </details>
@@ -273,6 +329,19 @@
                             </label>
                         </div>
                     </div>
+                    
+
+                    <div class = "parameter-adjustment">
+                        <div class = "parameter-label">
+                            <div>margin ratio</div>
+                            <div class="val-display">value</div>
+                        </div>
+                        <input type="range" id="margin_ratio" min="0" max="3" step="0.1" value="0.3">
+                        
+                    </div>
+
+
+                </div>
             </div>
 
 

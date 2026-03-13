@@ -12,6 +12,7 @@ export function getParameters() {
         max_x: parseFloat(document.getElementById("max_x").value),
         min_y: parseFloat(document.getElementById("min_y").value),
         max_y: parseFloat(document.getElementById("max_y").value),
+        margin_ratio: parseFloat(document.getElementById("margin_ratio").value),
 
         alpha: parseFloat(document.getElementById("alpha").value),
         beta: parseFloat(document.getElementById("beta").value),

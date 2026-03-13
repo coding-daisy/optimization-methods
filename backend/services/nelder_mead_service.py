@@ -37,11 +37,13 @@ def run_nelder_mead(req):
     simplexes = get_nelder_mead_simplexes(
         function,
         search_space,
-        alpha = req.alpha,
-        beta = req.beta,
-        gamma = req.gamma,
-        max_iter = req.max_iter,
-        delta = req.delta
+        req.alpha,
+        req.beta,
+        req.gamma,
+        req.max_iter,
+        req.delta,
+        req.penalty_function, 
+        req.penalty_strength
     )
 
     frames = []
